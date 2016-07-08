@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+    <description/>
+
+	<servlet>
+        <servlet-name>fileUploadPDFpo</servlet-name>
+        <servlet-class>fg.ajax.PDFpo.FileUploadServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>uploadStatusPDFpo</servlet-name>
+        <servlet-class>fg.ajax.PDFpo.AjaxUploadStatusServlet</servlet-class>
+    </servlet>		
+	
+    <servlet-mapping>
+        <servlet-name>fileUploadPDFpo</servlet-name>
+        <url-pattern>/FileUploadPDFpo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>uploadStatusPDFpo</servlet-name>
+        <url-pattern>/UploadStatusPDFpo</url-pattern>
+    </servlet-mapping>	
+
+    <session-config>
+        <session-timeout>120</session-timeout>
+    </session-config>
+	
+</web-app>

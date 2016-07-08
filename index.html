@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- 
+	Pdf Overlay
+    Jun/2016 - Edgar Delgado Barbosa
+-->
+<html>
+    <head>
+        <title>Pdf Overlay</title>
+        <!--[if gte IE 5.5000]>
+            <META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+            <SCRIPT type=text/javascript src="png.js"></SCRIPT>
+        <![endif]-->
+        <meta http-equiv="PRAGMA" content="NO-CACHE" />
+        <meta http-equiv="CACHE-CONTROL" content="NO-STORE, NO-CACHE, MUST-REVALIDATE, POST-CHECK=0, PRE-CHECK=0" />
+        <meta http-equiv="EXPIRES" content="01 Jan 1970 00:00:00 GMT" />
+        <meta http-equiv="Last-Modified" content="01 Jan 1970 00:00:00 GMT" />
+        <meta http-equiv="If-Modified-Since" content="01 Jan 1970 00:00:00 GMT" />
+        <meta name=GENERATOR content="MSHTML 8.00.7600.16444"/>
+        <script language=javascript type="text/javascript" src="pdfoverlay.js"></script>
+        <script type="text/javascript" src="prototype.js"></script>
+        <script language=javascript type="text/javascript">window.name = "pdfoverlay";</script>
+        <link rel="stylesheet" href="pdfoverlay.css" type="text/css" media="screen"/>
+    </head>
+    <body>
+        <div id="page">
+            <div id="header">
+                <div style="float:left; text-align:left; width:25%;"><b>Pdf Overlay - test</b></div>
+                <div style="float:left; text-align:center; width:75%;"></div>
+            </div>	
+				<div style="width:100%; height:auto; padding: 10px; margin:0px; background-color:#dddddd; font-size:11px; ">
+					<table style="width:100%" border="0">
+						<tr style="height:24px;">
+							<td style="width:100px;">
+								<div>
+									<div class="file_upload">
+										<form name="upload_po" action="FileUploadPDFpo" method="post" enctype="multipart/form-data" target="target_upload">
+											<input type="hidden" name="m" id="m" value=""/>
+											<input type="file" accept="application/pdf" class="file_input_hidden" name="myfile" onchange="javascript:upload_file_po(this.value);this.value=null;" title="Click here to upload PDF(s) document(s)." multiple/>
+										</form>
+									</div>
+								</div>
+							</td>	
+							<td style="width:160px;">
+								Model:<select name="pdf_model_po" id="pdf_model_po" style="font-size:11px;">
+									<option value="1" selected="-1">Model Nr. 1</option>
+									<option value="2">Model Nr. 2</option>
+								</select>
+							</td>
+							<td>
+								<div id="messageStatusPO" style="height:12px;"></div>
+							</td>	
+						</tr>
+					</table>
+				</div>				
+			</div>
+			<iframe id='target_upload' name='target_upload' src='' style='display: none; padding:0; margin:0; width:1px; height:1px; '></iframe>
+			<div id="messageDiv" style="padding:0; margin:0; width:1px; height:1px; visibility:hidden;font-size:1px;"></div>
+            <div id="footer">
+                <div style="float:left;text-align:center;width:100%;"><a href="mailto:edgar_barbosa@hotmail.com">Info</a></div>
+            </div>			
+		</div>
+    </body>
+</html>
+
+
