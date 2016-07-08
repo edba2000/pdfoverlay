@@ -11,8 +11,6 @@ import java.io.File;
 import java.io.OutputStream;
 import java.io.IOException;
 
-import remarks.ajax.FileUploadListener;
-
 public class MonitoredDiskFileItem extends DiskFileItem
 {
   private MonitoredOutputStream mos = null;
